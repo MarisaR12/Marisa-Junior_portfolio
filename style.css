@@ -1,21 +1,21 @@
 html,body{
 	height: 99%;
 	width: 99%;
-	background-color: ghostwhite;
+	background-color: white;
 }
 *{
 	box-sizing: border-box;
 }
 .banner{
-	background-color: rgba(159,166,104,0.4);
+	background-color:#f1bcd4;
 	margin: 15px;
 	padding: 10px;
-	border: 3px solid #a3c1ad;
-	box-shadow: 1px 3px 30px 1px #b7cc9d;
+	border: 3px solid white;
+	box-shadow: 1px 3px 30px 1px #F4BECF;
 	outline: 10px 10px #49796b groove;
 	text-transform: capitalize;
-	text-shadow: 1px 1px #317873 ;
-	font-family: 'M PLUS Rounded 1c', sans-serif;					height: 120px;
+	font-family: 'M PLUS Rounded 1c', sans-serif;					
+    height: 120px;
 	text-align: right;
 	font-style: oblique;
 }
@@ -64,17 +64,17 @@ h1{
 	position: absolute;
 	top: 50px;
 	left: 70px;
-	color:#5f9ea0;
+	color:#ffff;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	font-size: 2em;
-	text-shadow: 2px 2px #317873;
+	text-shadow: 2px 2px #f295be;
 	font-style: oblique;
 	width: 100px;
 	overflow: hidden;
 }
 .menu a{
-	color: #a0d6b4;
-	background-color: #317873;
+	color: #ffff;
+	background-color: #f295be;
 	text-shadow: 0px 0px ;
 	font-size: 0.5em;
 
@@ -86,8 +86,8 @@ h1{
 	display: block;
 }
 .menu a:hover{
-	color: yellow;
-	background-color: navy;
+	color:#f295be;
+	background-color: white;
 }
 .left{
 	width: 48%;
