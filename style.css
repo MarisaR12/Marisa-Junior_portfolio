@@ -80,28 +80,28 @@ input[type=text] {
   border: none;
   background-color: #ebebeb;
   margin-top: -10px;
-  margin-left: 315px;
+  margin-left: 620px;
   height: 40px;
   color: #000000;
   padding: 5px;
   font-size: 1.5em;
 }
 
-.circle{
+.buttonrow{
   height: 75px;
   width: 75px;
   background-color: #a8a8a8;
   border-radius: 75%;
-  margin-left: 315px;
+  margin-left: 620px;
   margin-top:40px ;
 }
-.circle1{
+.button1{
   height: 75px;
   width: 75px;
   background-color: #a8a8a8;
   border-radius: 75%;
-  margin-left: 315px;
-  margin-top:30px ;
+  margin-left: -165px;
+  margin-top:150px ;
 }
 .column1 {
   float: left;
@@ -118,7 +118,7 @@ input[type=text] {
 .column2 {
   float: left;
   width: 250px;
-  padding:10px;
+  padding:45px;
 }
 
 .row2::after {
@@ -128,8 +128,14 @@ input[type=text] {
 }
 
 /*hover*/
-.circle:hover{
-  background-color: #f1f1f1;
+.buttonrow:hover {
+  background-color: #558271;
+  color: white;
+}
+
+.button1:hover {
+  background-color: rgb(230, 230, 230, 0.9);
+  color: white;
 }
 /*Menu*/
 .overlay {     
