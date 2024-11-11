@@ -4,328 +4,257 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 <title>CFUS</title>
-<link href="cfutest.css" rel="stylesheet" type="text/css" />
+<link href="cfu.css" rel="stylesheet" type="text/css" />
 <link href="favicon.png" rel="icon" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-  <style>
-    .overlay {     
-    height: 100%;       
-    width: 0;       
-    position: fixed;       
-    top: 0;      
-    left: 0;       
-    background-color: rgb(0, 0, 0, 0.9);    
-    overflow-x: hidden;   
-    transition: 0.5s;
-    z-index: 20;
-    }     
-    .overlay-content {       
-    position: relative;      
-    top: 50%;       
-    width: 100%;      
-    text-align: center;       
-    transform: translateY(-50%); 
-    z-index: 20;
-    }     
 
-    .overlay-content a {       
-    padding: 10px;       
-    text-decoration: none;       
-    font-size: 36px;       
-    color: #664297;       
-    display: block;       
-    transition: 0.3s; 
-      z-index: 20;
-    }     
-    .overlay-content a:hover {       
-    color:white;     
-    }     
-    .closebtn {       
-    position: absolute;       
-    top: 20px;       
-    right: 45px;       
-    font-size: 60px;       
-    color: #ffffff;       
-    text-decoration: none;     
-    }     
-    /* Open button */     
-    .open-btn {       
-    font-size: 2em;       
-    cursor: pointer;       
-    color: white;       
-    position: absolute;       
-    top: 20px;       
-    left: 20px;
-    font-family: Concert One;
-    padding-left: 10px;
-    }
-  </style>
-</head>
-  <body>
+  </head>
+  <!--body background-->
+  <body style="background-color:#443483; margin: 15px; padding: 10px; border: 3px solid white; box-shadow: 1px 3px 30px 1px #F4BECF;">
 
-  
-  <div class="pagination">
+<!--menu-->
     <span class="open-btn" onclick="openNav()">&#9776;</span>
-
-      <div id="myNav" class="overlay" style="background-color:;">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="background-color:rgb(0, 0, 0, 0.9);">&times;</a>
-        <div class="overlay-content">
-          <a href="index.html" style="font-family: Concert One; font-size: 3em;">Home</a>
-          <a href="cfutest.html" style="font-family: Concert One; font-size: 3em;">CFUS</a>
-          <a href="#" style="font-family: Concert One; font-size: 3em;">Labs</a>
-          <a href="#" style="font-family: Concert One; font-size: 3em;">Games</a>  
-        </div>
-      </div>
-
-    <span onclick="openNav()"></span>
-    <a href="#section-1">Inline page 1</a>
-    <a href="#section-2">Inline page 2</a>
-    <a href="#section-3">Inline page 3</a>
-    <a href="#section-4">Inline page 4</a>
-    <a href="#section-5">Inline page 5</a>
-    <a href="#section-6">Inline page 6</a>
-    <a href="#section-7">Inline page 7</a>
-    <a href="#section-8">Inline page 8</a>
-    <a href="#section-9">Inline page 9</a>
-    <a href="#section-10">Inline page 10</a>
-    <a href="#section-11">Inline page 11</a>
-    <a href="#section-12">Inline page 12</a>
-  </div>
-
-
-
-  
-<!--Section 1-->
-  <section id="section-1" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#1:
-        <br>In this CFU we learned how to create variables, use input, and use print. Using those 3 things we were able to create a program that allows the user to input their first and last name and the computer will output "Hello" with their name.</h6>  
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_0.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-    <iframe src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_0.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-
-  </section>
-
-  <!--section 2-->
-  <section id="section-2" style="background-color: #664297;">
-    <article class="card"  style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#2:
-        <br>In this CFU we learned how to use int and str. Int is used for numbers and we use str to make it a string when using it with other strings. The program will prompt the user to answer questions and out a sentence with those answers </h6>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_0.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-      <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_0.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 3-->
-  <section id="section-3" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-    <h6>CFU#3:
-      <br>In this CFU we learned how to do basic operations (multiplication, division, additon, and subtraction) using python. The programs prompts the user to enter their name and 2 numbers. The computer will then use those 2 number to run the operations and output what the equations are equal to</h6>
-      <br>
-      <br>
-      <br>
-    <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_1.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-      <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_1.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 4-->
-  <section id="section-4" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#4:
-        <br>In this CFU we learned what import math was which would allow us to use square root, absolute value, exponents, etc. We created a prorgram where the user is prompted to enter 2 numbers. Those 2 numbers will then go through the quadratic formula and then roots will be outputted</h6>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_2.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-      <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_2.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 5-->
-  
-  <section id="section-5" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#5:
-        <br>For this CFU the user had to enter the amount of pennies, nickels, dimes,quarters, toonies, and loonies. The program we created will then calculate how much money the user has.</h6>
-      <br>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_3.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-      <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_3.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 6-->
-  <section id="section-6" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#6:
-        <br>In this CFU we created a program we used import random and import math to as the user to enter a number and then another number will be randomly picked by the computer. Those 2 number will then go through the operations the program has and ouput the answers to those equations.</h6>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_4.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-      <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_4.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 7-->
-  <section id="section-7" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#7:
-        <br>In this CFU we learned how to create functions. Using those functions the program will run finding the sum and average of the numbers.</h6>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_5.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-     <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_5.py" height="200%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 8-->
-  <section id="section-8" style="background-color: #664297;">
-    <article class="card" style="margin-left: -60%; margin-right: 50%;">
-      <h6>CFU#8:
-        <br>In this CFU we learned about if-else statement. Using that we created a program that ask the user if they ordered delivery and if they did the cost and the cost per person.</h6>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_6.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -50%; margin-right: -85%;">
-     <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_6.py" height="180%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-  </section>
-
-  <!--section 9-->
-  <section id="section-9" style="background-color: #664297;">
-    <article class="card" style="margin-left: -95%; margin-right: 75%;">
-      <h6>CFU#9:
-        <br>In this CFU we created a program that ask the user how many times they want to roll the dice. For every round a random number will be picked and the user has to guess the number.</h6>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_7.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -80%; margin-right: -77%;">
-     <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_7.py" height="130%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-
-    <article class="card" style="margin-left:70%; margin-right: -100%;">
-      <img id="myImg" src="CFU9 flowchart.png"/>
-      <h6 style="font-family: Concert One;">click photo to see bigger</h6>
-    </article>
-  </section>
-
-<!--section 10-->
-  <section id="section-10" style="background-color: #664297;">
-    <article class="card" style="margin-left: -95%; margin-right: 75%;">
-      <h6>CFU#10:
-        <br>In this CFU the program uses import random to generate a random number. The user then has to guess the number that was generated.</h6>
-      <br>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_11.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -80%; margin-right: -77%;">
-     <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_11.py" height="150%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-
-    <article class="card" style="margin-left:70%; margin-right: -100%;">
-      <img id="myImg10" src="CFU 10.png"/>
-      <h6>Click photo to see bigger</h6>
-    </article>
-  </section>
-
-  <!--section 11-->
-  <section id="section-11" style="background-color: #664297;">
-    <article class="card" style="margin-left: -95%; margin-right: 75%;">
-      <h6>CFU#11:
-        <br>In this program the user get to pick what function they want to run. Once they input it the function will then run.</h6>
-      <br>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_9.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -80%; margin-right: -77%;">
-     <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_9.py" height="200%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-
-    <article class="card" style="margin-left:70%; margin-right: -100%;">
-      <img src="cfu11.png"/>
-      <h6>Click to see photo bigger</h6>
-    </article>
-  </section>
-
-  <!--section 12-->
-  <section id="section-12" style="background-color: #664297;">
-    <article class="card" style="margin-left: -95%; margin-right: 75%;">
-      <h6>CFU#12:
-        <br>In this the user get to pick what version they want. Version 1 allows the user to guess the password infinite times. Version 2 allows the user 3 guesses</h6>
-      <br>
-      <br>
-      <br>
-      <br>
-      <a href="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_10.py" target="_blank">See CFU in another tab</a>
-    </article>
-
-    <article class="card" style="margin-left: -80%; margin-right: -77%;">
-     <iframe src="https://py3.codeskulptor.org/#user309_Nkqe5dQGm3_10.py" height="220%" width="100%" frameborder="0" style="background-color:white;"></iframe>
-    </article>
-
-    <article class="card" style="margin-left:70%; margin-right: -100%;">
-      <img src="cfu12.png"/>
-      <h6>Click to see photo bigger</h6>
-    </article>
-  </section>
     
-   <script>
-     function openNav() {
-             document.getElementById("myNav").style.width = "100%";
-           }
+    <div id="myNav" class="overlay" style="background-color:;">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="background-color:rgb(0, 0, 0, 0.9);">&times;</a>
+      <div class="overlay-content">
+        <a href="index.html" style="font-family: Concert One; font-size: 3em;">Home</a>
+        <a href="CFU.html" style="font-family: Concert One; font-size: 3em;">CFUS</a>
+        <a href="#" style="font-family: Concert One; font-size: 3em;">Labs</a>
+        <a href="#" style="font-family: Concert One; font-size: 3em;">Games</a>  
+      </div>
+    </div>
+    
+ <h1 class ="header">⋆Check For Understandings⋆</h1>
+    <div class = "description"><p>Below are the CFU's that we do to see if we understand what's going on in class. The code below is interactice and the arrows allow you to move from CFU to CFU. If you want to open them in a seperate tab click on the link in the corner of the CFU below.</p></div>
+<!--CFU slideshow--> 
+<!--CFU 1-->
+<div class="slideshow-container">
+<div class="mySlides fade">
+<div class="numbertext">1 /12 </div>
+<iframe class = "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_0.py"></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_0.py" target="_blank">CFU #1</a></div>
+</div>
+      
+<!--CFU 2-->
+<div class="mySlides fade">
+<div class="numbertext">2 /12</div>
+<iframe class = "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_3.py" </iframe> 
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_3.py" target="_blank">CFU #2</a></div>
+</div>
+      
+<!--CFU 3-->
+<div class="mySlides fade">
+<div class="numbertext">3 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_2.py" ></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_2.py" target="_blank">CFU #3</a></div>
+</div>
+      
+<!--CFU 4-->
+<div class="mySlides fade">
+<div class="numbertext">4 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_4.py" ></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_4.py" target="_blank">CFU #4</a></div>
+</div>
+      
+<!--CFU 5-->
+<div class="mySlides fade">
+<div class="numbertext">5 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_7.py" ></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_7.py" target="_blank">CFU #5</a></div>
+</div>
 
-     /* Close when someone clicks on the "x" symbol inside the overlay */
-           function closeNav() {
-             document.getElementById("myNav").style.width = "0%";
-           }
+<!--CFU 6-->
+<div class="mySlides fade">
+<div class="numbertext">6 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_8.py"></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_8.py" target="_blank">CFU #6</a></div>
+</div>
 
-   </script>
-  
-</body>
+<!--CFU 7-->
+<div class="mySlides fade">
+<div class="numbertext">7 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_9.py" ></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_9.py" target="_blank">CFU #7</a></div>
+</div>
+
+<!--CFU 8-->
+<div class="mySlides fade">
+<div class="numbertext">8 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_10.py" ></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_10.py" target="_blank">CFU #8</a></div>
+</div>
+
+<!--CFU 9-->
+<div class="mySlides fade">
+<div class="numbertext">9 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_11.py" ></iframe>
+  <div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_11.py" target="_blank">CFU #9</a></div>
+</div>
+
+<!--CFU 10-->
+<div class="mySlides fade">
+<div class="numbertext">10 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_12.py" ></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_12.py" target="_blank" >CFU #10</a></div>
+</div>
+
+<!--CFU 11-->
+<div class="mySlides fade">
+<div class="numbertext">11 /12</div>
+<iframe class= "cframe"src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_13.py"></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_13.py" target="_blank" >CFU #11</a></div>
+</div>
+
+<!--CFU 12-->
+<div class="mySlides fade">
+<div class="numbertext">12 /12</div>
+<iframe class= "cframe" src="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_14.py"></iframe>
+<div class = "text"><a class = "cfulink"href="https://py3.codeskulptor.org/#user309_KLOBiDXKJo_14.py" target="_blank">CFU #12</a></div>
+</div>
+      
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+   
+    <table>
+      <tr>
+        <th>CFU description</th>
+        <th>Flowchart</th>
+      </tr>
+      <tr>
+        <td>
+          <h4>CFU#1:
+            <br>In this CFU we learned how to create variables, use input, and use print. Using those 3 things we were able to create a program that allows the user to input their first and last name and the computer will output "Hello" with their name.</h4>  </td>
+        <td><h1>No flowchart</h1></td>
+      </tr>
+      <tr>
+        <td><h4>CFU#2:
+          <br>In this CFU we learned how to use int and str. Int is used for numbers and we use str to make it a string when using it with other strings. The program will prompt the user to answer questions and out a sentence with those answers </h4></td>
+        <td><h1>No flowchart</h1></td>
+      </tr>
+      <tr>
+        <td><h4>CFU#3:
+          <br>In this CFU we learned how to do basic operations (multiplication, division, additon, and subtraction) using python. The programs prompts the user to enter their name and 2 numbers. The computer will then use those 2 number to run the operations and output what the equations are equal to</h4></td>
+        <td><h1>No flowchart</h1></td>
+      </tr>
+      <tr>
+      <td><h4>CFU#4:
+        <br>In this CFU we learned what import math was which would allow us to use square root, absolute value, exponents, etc. We created a prorgram where the user is prompted to enter 2 numbers. Those 2 numbers will then go through the quadratic formula and then roots will be outputted</h4></td>
+        <td><h1>No flowchart</h1></td>
+      </tr>   
+      <tr>
+        <td><h4>CFU#4:
+          <br>In this CFU we learned what import math was which would allow us to use square root, absolute value, exponents, etc. We created a prorgram where the user is prompted to enter 2 numbers. Those 2 numbers will then go through the quadratic formula and then roots will be outputted</h4></td>
+          <td><h1>No flowchart</h1></td>
+        </tr>
+      <tr>
+        <td><h4>CFU#5:
+        <br>For this CFU the user had to enter the amount of pennies, nickels, dimes,quarters, toonies, and loonies. The program we created will then calculate how much money the user has.</h4></td>
+          <td><h1>No flowchart</h1></td>
+        </tr>
+      <tr>
+        <td><h4>CFU#6:
+        <br>In this CFU we created a program we used import random and import math to as the user to enter a number and then another number will be randomly picked by the computer. Those 2 number will then go through the operations the program has and ouput the answers to those equations.</h4></td>
+          <td><h1>No flowchart</h1></td>
+        </tr>
+      <tr>
+        <td><h4>CFU#7:
+        <br>In this CFU we learned how to create functions. Using those functions the program will run finding the sum and average of the numbers.</h4></td>
+          <td><h1>No flowchart</h1></td>
+        </tr>
+      <tr>
+        <td><h4>CFU#8:
+          <br>In this CFU we learned about if-else statement. Using that we created a program that ask the user if they ordered delivery and if they did the cost and the cost per person.</h4></td>
+          <td><h1>No flowchart</h1></td>
+        </tr>
+      <tr>
+        <td><h4>CFU#9:
+          <br>In this CFU we created a program that ask the user how many times they want to roll the dice. For every round a random number will be picked and the user has to guess the number.</h4><td>
+        <td><img src="CFU9 flowchart.png"/></td>
+        </tr>
+      <tr>
+      <td><h4>CFU#10:
+      <br>In this CFU the program uses import random to generate a random number. The user then has to guess the number that was generated.
+</h4><td>
+      <td><img src="CFU 10.png"/></td>
+      </tr>
+      <tr>
+        <td><h4>CFU#11:
+          <br>In this program the user get to pick what function they want to run. Once they input it the function will then run.
+      </h4><td>
+        <td><img src="cfu11.png"/></td>
+        </tr>
+      <tr>
+        <td><h4>CFU#12:
+          <br>In this the user get to pick what version they want. Version 1 allows the user to guess the password infinite times. Version 2 allows the user 3 guesses
+      </h4><td>
+        <td><img src="cfu12.png"/></td>
+        </tr>
+    </table>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!--Javascript-->   
+    <script>
+      /* Open when someone clicks on the span element */
+function openNav() {
+              document.getElementById("myNav").style.width = "100%";
+            }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+            function closeNav() {
+              document.getElementById("myNav").style.width = "0%";
+            }
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  </body>
 </html>
+
