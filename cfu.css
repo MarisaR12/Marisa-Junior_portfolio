@@ -159,7 +159,6 @@ font-size: 3em;
 .description{
   font-size: 1em;
   font-family: Concert One;
-  text-align: center;
   color:white;
 }
 
@@ -183,4 +182,11 @@ td, th {
 }
 th{
   font-size: 2em;
+}
+h4{  
+  text-align: center;
+  font-size: 1.5em;
+}
+p{
+  font-size: 1.4em;
 }
