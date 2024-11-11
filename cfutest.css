@@ -1,323 +1,164 @@
-@import "https://unpkg.com/open-props" layer(design.system);
-@import "https://unpkg.com/open-props/normalize.min.css" layer(demo.support);
-@import "https://unpkg.com/open-props/buttons.min.css" layer(demo.support);
+/*Menu*/
+.overlay {     
+height: 100%;       
+width: 0;       
+position: fixed;       
+top: 0;      
+left: 0;       
+background-color: rgb(0, 0, 0, 0.9);    
+overflow-x: hidden;   
+transition: 0.5s;
+z-index: 20;
+}     
+.overlay-content {       
+position: relative;      
+top: 50%;       
+width: 100%;      
+text-align: center;       
+transform: translateY(-50%); 
+z-index: 20;
+}     
 
+.overlay-content a {       
+padding: 10px;       
+text-decoration: none;       
+font-size: 36px;       
+color: #664297;       
+display: block;       
+transition: 0.3s; 
+  z-index: 20;
+}     
+.overlay-content a:hover {       
+color:white;     
+}     
+.closebtn {       
+position: absolute;       
+top: 20px;       
+right: 45px;       
+font-size: 60px;       
+color: #ffffff;       
+text-decoration: none;     
+}     
+/* Open button */     
+.open-btn {       
+font-size: 2em;       
+cursor: pointer;       
+color: white;       
+position: absolute;       
+top: 20px;       
+left: 20px;
+font-family: Concert One;
+padding-left: 10px;
+}   
 
+/*CFU*/
+* {box-sizing: border-box}
 
-@layer demo.color {
-  /* type safe angle prop for use with SDA */
-  @property --hue {
-    syntax: '<angle>';
-    initial-value: 0turn;
-    inherits: false;
-  }
+.mySlides {display: none}
+img {vertical-align: middle;}
 
-  /* this section uses those dynamic color props on elements */
-  :focus-visible {
-    outline-color: var(--focus);
-  }
-
-  .card {
-    background: var(--surface-2);
-    padding:20%;
-
-  }
-
-
-
-
-  .pagination > a {
-    background: var(--surface-2);
-  }
-
-  a {
-    text-decoration-color: var(--focus);
-  }
+/* Slideshow container */
+.slideshow-container {
+  width: 1000px;
+  height: 650px;
+  position: relative;
+  margin: auto;
+  padding-top:15px;
 }
 
-@layer demo.scroll-driven-animation {
-  :root {
-    overflow-x: auto;
-    overscroll-behavior: contain;
-
-    /* be a snap scroller on x */
-    scroll-snap-type: x mandatory;
-
-    /* scroll snap sections */
-    & body > section {
-      scroll-snap-align: start;
-    }
-
-    @supports (animation-timeline: scroll()) {
-      /* animation progress is the full page scroll range */
-      animation-timeline: scroll(x); 
-    }
-    }
-
-  /* pagination dots effect */
-  /* scaled out, until in view, then scale 1 */
-  @keyframes dot-selected { 
-    0%, 100% {
-      scale: .75;
-    }
-    50% {
-      scale: 1;
-      background: var(--text-2);
-    }
-  }
-
-  /* expose the following view timelines for any elements to observe by name */
-  body {
-    timeline-scope: 
-      --section-1, 
-      --section-2, 
-      --section-3, 
-      --section-4, 
-      --section-5, 
-      --section-6, 
-      --section-7
-      --section-8
-      --section-9
-      --section-10
-      --section-11
-      --section-12;
-    ;
-  }
-
-  /* give each section it's relevant view timeline name */
-  /* note: this must match the name exposed on the body timeline-scope */
- 
-
-  .pagination > a {
-    @supports (animation-timeline: scroll()) {
-      animation: dot-selected linear both;  
-    }
-
-    /* power the scale animation by observing a relevant view timeline */
-    &:nth-child(1) { animation-timeline: --section-1 }
-    &:nth-child(2) { animation-timeline: --section-2 }
-    &:nth-child(3) { animation-timeline: --section-3 }
-    &:nth-child(4) { animation-timeline: --section-4 }
-    &:nth-child(5) { animation-timeline: --section-5 }
-    &:nth-child(6) { animation-timeline: --section-6 }
-    &:nth-child(7) { animation-timeline: --section-7 }
-    &:nth-child(8) { animation-timeline: --section-8 }
-    &:nth-child(9) { animation-timeline: --section-9 }
-    &:nth-child(10) { animation-timeline: --section-10 }
-    &:nth-child(11) { animation-timeline: --section-11 }
-    &:nth-child(12) { animation-timeline: --section-12 }
-  }
-  
-
-  /* card entry/exit animations */
-  @keyframes fancy-in {
-    0% {
-      transform: translateX(25vw);
-    }
-    20%, 80% {
-      opacity: 1;
-      transform: none;
-    }
-    100% {
-      transform: translateX(90%) scale(.98);
-      opacity: 0;
-    }
-  }
-
-  .card {
-    @media (prefers-reduced-motion: no-preference) {
-      @supports (animation-timeline: scroll()) {
-        animation: fancy-in linear both;
-        animation-timeline: view(x);
-      }
-    }
-  }
-
-  /* fade in/out of the next/previous buttons */
-  @keyframes toggle-control {
-    50% { 
-      opacity: 0 
-    }
-  }
-
-  .controls {
-    & > button {
-      /* if supported, enable the visibility toggling animation */
-      @supports (animation-timeline: scroll()) {
-        animation: toggle-control linear both;
-      }
-
-      /* fade out the previous button when section 1 is in view */
-      &.previous {
-        animation-timeline: --section-1;
-      }
-
-      /* fade out the next button when at the last section */
-      &.next {
-        animation-timeline: --section-7;
-      }
-    }
-  }
-}
-
-@layer demo.support {
-  body {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 100vw;
-  }
-
-  .pagination {
-    position: fixed;
-    z-index: 1;
-    inset-inline: 0;
-    inset-block-end: var(--size-5);
-    display: flex;
-    place-content: center;
-    gap: var(--size-3);
-    padding: var(--size-3);
-
-    & > a {
-      display: inline-flex;
-      place-content: center;
-      inline-size: 2ch;
-      flex-shrink: 0;
-      aspect-ratio: var(--ratio-square);
-      border-radius: var(--radius-round);
-      overflow: hidden;
-      text-indent: 100vw;
-
-      &:is(:hover, :focus-visible) {
-        outline: 1px dashed var(--focus);
-        outline-offset: 2px;
-      }
-
-      &:visited {
-        background: inherit !important;
-      }
-    }
-  }
-
-  .controls {
-    position: fixed;
-    z-index: 1;
-    inset-block-start: calc(50% - var(--size-5) / 2);
-    inset-inline: var(--size-3);
-    display: flex;
-    justify-content: space-between;
-  }
-
-  section {
-    display: grid;
-    place-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(20ch, min(30ch, 25cqi)));
-    gap: var(--size-5);
-    padding: var(--size-5);
-
-    & > * {
-      display: grid;
-      grid-row: span 4; 
-      grid-template-rows: subgrid; 
-      gap: var(--size-2);
-    }
-  }
-
-  .card {
-    border: 1px solid transparent;
-    padding-block: var(--size-5);
-    padding-inline: var(--size-7);
-    border-radius: var(--radius-3);
-
-    & > a {
-      white-space: nowrap;
-      justify-self: start;
-    }
-
-    @media (prefers-reduced-motion: no-preference) {
-      transition: transform .5s var(--ease-spring-3);
-
-      &:focus-within {
-        transform: translateY(-10px);
-      }
-    }
-  }
-
-  article > img {
-    opacity: .75;
-  }
-}
-
-#myImg {
-  border-radius: 5px;
+/* Next & previous buttons */
+.prev, .next {
   cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-.modal-content, #caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
-}
-
-
-.close {
   position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #71669e;
   font-weight: bold;
-  transition: 0.3s;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgb(0, 0, 0,0.8);
+}
 
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 50px 10px;
+  padding-left: 900px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  padding-top:30px;
+}
+
+.cfulink{
+  color:#594d83;
+  font-family: Concert One;
+  padding-top:30px;
+}
+
+.cfulink:hover{
+  color:#c385d9;
+  background-color: transparent;
+  padding-top:30px;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  padding-top:25px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.cframe{
+  width: 100%;
+  height: 600px;
+  background-color: white;
+}
+
+.header{
+text-align:center;
+font-family:Concert One ;
+font-size: 3em;
+  color:white;
+}
+
+/*Description*/
+.description{
+  font-size: 1em;
+  font-family: Concert One;
+  text-align: center;
+  color:white;
 }
